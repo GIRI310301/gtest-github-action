@@ -85,3 +85,33 @@ TEST(string_calculator_add_when_passed_numbers_over_1000, ignores_them)
 
   ASSERT_EQ(actualSum,expectedSum);
 }
+
+TEST(string_calculator_add_when_passed_multicharacter_delimiter, uses_that_delimiter_to_sum_values) 
+{
+  StringCalculator calculator;
+  string inp = "//[***]\n8***2***3";
+  int expectedSum = 13;
+  int actualSum = calculator.Add(inp);
+
+  ASSERT_EQ(actualSum,expectedSum);
+}
+
+TEST(string_calculator_add_when_passed_multiple_delimiters, sums_on_each_delimiter) 
+{
+  StringCalculator calculator;
+  string inp = "//[*][%]\n4*2%3";
+  int expectedSum = 9;
+  int actualSum = calculator.Add(inp);
+
+  ASSERT_EQ(actualSum,expectedSum);
+}
+
+TEST(string_calculator_add_when_passed_multiple_multicharacter_delimiters, sums_on_each_delimiter) 
+{
+  StringCalculator calculator;
+  string inp = "//[**][%^]\n4**1%^9";
+  int expectedSum = 14;
+  int actualSum = calculator.Add(inp);
+
+  ASSERT_EQ(actualSum,expectedSum);
+}
