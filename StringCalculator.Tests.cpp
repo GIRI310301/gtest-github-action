@@ -75,3 +75,13 @@ TEST(string_calculator_add_when_passed_negative_numbers, throws_an_exception_lis
   //ASSERT_EQ(actualSum,expectedSum);
   //ASSERT_EQ(LastException<std::invalid_argument>().what(), "Negatives not allowed: -2,-4");
 }
+
+TEST(string_calculator_add_when_passed_numbers_over_1000, ignores_them) 
+{
+  StringCalculator calculator;
+  string inp = "42,1001,3";
+  int expectedSum = 45;
+  int actualSum = calculator.Add(inp);
+
+  ASSERT_EQ(actualSum,expectedSum);
+}
