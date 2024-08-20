@@ -67,8 +67,9 @@ TEST(string_calculator_add_when_passed_negative_numbers, throws_an_exception_lis
 {
   StringCalculator calculator;
   string inp = "1,-2,-4,5";
+  int actualSum = calculator.Add(inp);
 
-  ASSERT_THROW(calculator.Add(inp), std::invalid_argument);
+  ASSERT_THROW(actualSum,invalid_argument);
 }
 
 TEST(string_calculator_add_when_passed_numbers_over_1000, ignores_them) 
