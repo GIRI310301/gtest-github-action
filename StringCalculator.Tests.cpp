@@ -57,7 +57,7 @@ TEST(string_calculator_add_when_delimited_with_newline_and_comma, returns_their_
 {
   StringCalculator calculator;
   string inp = "1\n2,3";
-  int expectedSum = 3;
+  int expectedSum = 6;
   int actualSum = calculator.Add(inp);
 
   ASSERT_EQ(actualSum,expectedSum);
@@ -70,7 +70,7 @@ TEST(string_calculator_add_when_passed_negative_numbers, throws_an_exception_lis
   //int expectedSum = 3;
   int actualSum = calculator.Add(inp);
 
-  ASSERT_THROW(actualSum, invalid_argument);
+  ASSERT_THROW(actualSum, std::invalid_argument);
   //ASSERT_EQ(actualSum,expectedSum);
   //ASSERT_EQ(LastException<std::invalid_argument>().what(), "Negatives not allowed: -2,-4");
 }
