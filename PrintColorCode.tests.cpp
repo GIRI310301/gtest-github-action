@@ -1,5 +1,5 @@
 #include "PrintColorCode.h"
-#include <gtest/getest.h>
+#include <gtest/gtest.h>
 
 TEST(PrintColorCodeTestSuite, ColorCodeManualCount)
 {
