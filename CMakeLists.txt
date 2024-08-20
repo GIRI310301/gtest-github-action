@@ -20,6 +20,8 @@ add_executable(
   cleancode
   PrintColorCode.cpp
   PrintColorCode.tests.cpp
+  StringCalculator.cpp
+  StringCalculator.Tests.cpp
   
 )
 target_link_libraries(
