@@ -68,7 +68,7 @@ TEST(string_calculator_add_when_passed_negative_numbers, throws_an_exception_lis
   StringCalculator calculator;
   string inp = "1,-2,-4,5";
 
-  ASSERT_THROW(calculator.Add(input),invalid_argument);
+  ASSERT_THROW(calculator.Add(inp),invalid_argument);
 }
 
 TEST(string_calculator_add_when_passed_numbers_over_1000, ignores_them) 
