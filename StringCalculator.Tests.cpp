@@ -70,7 +70,7 @@ TEST(string_calculator_add_when_passed_negative_numbers, throws_an_exception_lis
   //int expectedSum = 3;
   int actualSum = calculator.Add(inp);
 
-  EXPECT_THROW(actualSum, invalid_argument);
+  ASSERT_THROW(actualSum, invalid_argument);
   //ASSERT_EQ(actualSum,expectedSum);
   ASSERT_EQ(LastException<std::invalid_argument>().what(), "Negatives not allowed: -2,-4");
 }
