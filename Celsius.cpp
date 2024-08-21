@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include "Celsius.h"
 
 
@@ -25,6 +24,13 @@
 // }
 
 
+int alertFailureCount=0;
+void setCount(int count){
+   alertFailureCount=count;
+}
+int getCount(){
+   return alertFailureCount;
+}
 int realTimeNetworkAlerter(float celcius) {
    //Real Network Interaction Happens Here
     // Return 200 for ok
@@ -39,6 +45,6 @@ int realTimeNetworkAlerter(float celcius) {
     float celcius = (farenheit - 32) * 5 / 9;
     int returnCode = networkAlerter(celcius);
     if (returnCode != 200) {
-      alertFailureCount += 1;
+     alertFailureCount+=1;
     }
 }
