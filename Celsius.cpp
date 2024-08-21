@@ -9,6 +9,7 @@ int networkAlerter(int celcius) {
    //Real Network Interaction Happens Here
     // Return 200 for ok
     // Return 500 for not-ok
+   //if (std::fmod(celcius, 2.0) == 0.0) {
   if(celcius % 2==0){
     return 200;
   }
