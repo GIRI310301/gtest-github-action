@@ -24,10 +24,6 @@
 //     }
 // }
 
-#include <iostream>
-#include "TestChallenge.h"
-
-
 
 int realTimeNetworkAlerter(float celcius) {
    //Real Network Interaction Happens Here
