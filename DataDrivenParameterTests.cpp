@@ -16,7 +16,11 @@ INSTANTIATE_TEST_SUITE_P(SingleNumerParameter,
                          string_calculator_add_Parameter_Fixture,
                          testing::Values(
                                         std::make_tuple("1", 1),
-                                        std::make_tuple("1,2",3)
+                                        std::make_tuple("1,2",3),
+                                        std::make_tuple("1,2,3",6),
+                                        std::make_tuple("1\n2,3",6),
+                                        std::make_tuple("42,1001,3",45),
+                                        std::make_tuple("//[**][%^]\n4**1%^9",14)
   ));
 
 TEST_P(string_calculator_add_Parameter_Fixture,when_passed_a_single_Or_Multiple_Number_with_Delimiters_returns_Sum){
