@@ -1,3 +1,3 @@
 
-int networkAlerter(float celcius);
-void alertInCelcius(float farenheit);
+// int networkAlerter(float celcius);
+// void alertInCelcius(float farenheit);
