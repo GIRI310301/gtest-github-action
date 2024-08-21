@@ -27,6 +27,7 @@ TEST_F(StringCalculatorAddTestFixture,when_passed_a_single_number_returns_0_for_
   int expectedsum=0;
   //Act
   int actualSum=calculator.Add(input);
+  
   //Assert
   ASSERT_EQ(actualSum,expectedsum);
 }
