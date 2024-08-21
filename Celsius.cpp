@@ -5,7 +5,7 @@
 
 int alertFailureCount = 0;
 
-int networkAlerter(float celcius) {
+int networkAlerter(int celcius) {
    //Real Network Interaction Happens Here
     // Return 200 for ok
     // Return 500 for not-ok
