@@ -1,6 +1,11 @@
 #include <gtest/gtest.h>
 #include "StringCalculator.h"
 
+class string_calculator_add_Fixture:public testing::Test{
+  protected:
+  StringCalculator calculator;
+
+};
 class string_calculator_add_Parameter_Fixture:
                                  public string_calculator_add_Fixture, 
                                  public testing::WithParamInterface<std::tuple<std::string,int>>{
