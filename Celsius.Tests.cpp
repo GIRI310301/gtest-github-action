@@ -23,15 +23,15 @@ protected:
 };
 
 TEST_F(AlertCelsiusTest, TestNoIncrementOnSuccess) {
-    networkAlerter = mockNetworkAlerterSuccess;
+    networkAlerter = mockNetworkAlerterSuccess(100.0);
     alertInCelcius(100.0);
 
     ASSERT_EQ(alertFailureCount, 0);
 }
 
 TEST_F(AlertCelsiusTest, TestIncrementOnFailure) {
-    networkAlerter = mockNetworkAlerterFailure;
-    alertInCelcius(100.0);
+    networkAlerter = mockNetworkAlerterFailure(101.0);
+    alertInCelcius(101.0);
 
     ASSERT_EQ(alertFailureCount, 1);
 }
