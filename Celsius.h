@@ -1,5 +1,6 @@
 // int networkAlerter(float celcius);
 // void alertInCelcius(float farenheit);
+void setCount(int count);
+int getCount();
 
-extern int alertFailureCount = 0;
 void alertInCelcius(float farenheit,int(*networkAleter)(float celcius));
