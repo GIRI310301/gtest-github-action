@@ -22,7 +22,7 @@ add_executable(
   PrintColorCode.tests.cpp
   StringCalculator.cpp
   DataDrivenParameterTests.cpp
-  Celsius.Teste.cpp
+  Celsius.Tests.cpp
   
 )
 target_link_libraries(
