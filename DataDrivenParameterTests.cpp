@@ -33,3 +33,10 @@ TEST_P(string_calculator_add_Parameter_Fixture,when_passed_a_single_Or_Multiple_
   //Assert
   ASSERT_EQ(actualSum,expectedsum);
 }
+
+TEST_F(StringCalculatorAddTestFixture, string_calculator_add_when_passed_negative_numbers_throws_an_exception_listing_invalid_values) 
+{
+  string inp = "1,-2,-4,5";
+
+  ASSERT_THROW(calculator.Add(inp),invalid_argument);
+}
