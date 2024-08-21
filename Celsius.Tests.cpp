@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "Celsius.h"
 
-extern int alertFailureCount;
+//extern int alertFailureCount;
 //int (*networkAlerter)(float celcius);
 // Mock function to simulate the network response
 // int mockNetworkAlerterSuccess(float celcius) {
@@ -16,7 +16,7 @@ extern int alertFailureCount;
 class AlertCelsiusTest : public ::testing::Test {
 protected:
     void SetUp() override {
-        alertFailureCount = 0;
+        int alertFailureCount = 0;
     }
     void TearDown() override {
     }  
@@ -24,14 +24,16 @@ protected:
 
 TEST_F(AlertCelsiusTest, TestNoIncrementOnSuccess) {
     //networkAlerter = mockNetworkAlerterSuccess(100.0);
-    alertInCelcius(100.0);
+    float Celcius = 100.0;
+    alertInCelcius(Celcius);
 
     ASSERT_EQ(alertFailureCount, 0);
 }
 
 TEST_F(AlertCelsiusTest, TestIncrementOnFailure) {
     //networkAlerter = mockNetworkAlerterFailure(101.0);
-    alertInCelcius(101.0);
+    float Celcius = 101.0;
+    alertInCelcius(Celcius);
 
     ASSERT_EQ(alertFailureCount, 1);
 }
