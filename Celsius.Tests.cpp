@@ -13,25 +13,27 @@
 // }
 
 // Test fixture class
-class AlertCelsiusTest : public ::testing::Test {
-protected:
-    void SetUp() override {
-        int alertFailureCount = 0;
-    }
-    void TearDown() override {
-    }  
-};
+// class AlertCelsiusTest : public ::testing::Test {
+// protected:
+//     void SetUp() override {
+//         int alertFailureCount = 0;
+//     }
+//     void TearDown() override {
+//     }  
+// };
 
-TEST_F(AlertCelsiusTest, TestNoIncrementOnSuccess) {
+TEST(AlertCelsiusTest, TestNoIncrementOnSuccess) {
     //networkAlerter = mockNetworkAlerterSuccess(100.0);
+    int alertFailureCount = 0;
     float Celcius = 100.0;
     alertInCelcius(Celcius);
 
     ASSERT_EQ(alertFailureCount, 0);
 }
 
-TEST_F(AlertCelsiusTest, TestIncrementOnFailure) {
+TEST(AlertCelsiusTest, TestIncrementOnFailure) {
     //networkAlerter = mockNetworkAlerterFailure(101.0);
+    int alertFailureCount = 0;
     float Celcius = 101.0;
     alertInCelcius(Celcius);
 
