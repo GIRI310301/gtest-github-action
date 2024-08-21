@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Celsius.h"
 
 
 int alertFailureCount = 0;
