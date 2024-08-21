@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "Celsius.h"
 
+extern int alertFailureCount;
+int (*networkAlerter)(float celcius);
 // Mock function to simulate the network response
 int mockNetworkAlerterSuccess(float celcius) {
     return 200;  // Simulate success response
