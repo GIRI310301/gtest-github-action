@@ -25,7 +25,7 @@
 TEST(AlertCelsiusTest, TestNoIncrementOnSuccess) {
     //networkAlerter = mockNetworkAlerterSuccess(100.0);
     int alertFailureCount = 0;
-    float Celcius = 100.0;
+    float Celcius = 100;
     alertInCelcius(Celcius);
 
     ASSERT_EQ(alertFailureCount, 0);
@@ -34,7 +34,7 @@ TEST(AlertCelsiusTest, TestNoIncrementOnSuccess) {
 TEST(AlertCelsiusTest, TestIncrementOnFailure) {
     //networkAlerter = mockNetworkAlerterFailure(101.0);
     int alertFailureCount = 0;
-    float Celcius = 101.0;
+    float Celcius = 101;
     alertInCelcius(Celcius);
 
     ASSERT_EQ(alertFailureCount, 1);
